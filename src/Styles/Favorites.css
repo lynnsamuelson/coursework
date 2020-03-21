@@ -1,0 +1,101 @@
+.flex-container a {
+    color: #F8EFD0;
+}
+.favorites {
+    background-color: #F8EFD0;
+    color: #2A4C94;
+    height: 54vh;
+    margin: 5px 0 5px 15px;
+    text-align: center;
+    width: 90%;
+    margin: 0 5%;
+}
+
+.trim {
+    text-overflow: ellipsis;  
+    overflow:hidden;             
+    white-space:nowrap;          
+    width: 210px;  
+    text-align: left;
+}
+
+.flex-container li p {
+    margin: 0 0 0 10px;
+}
+
+.flex-container li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container li:first-child {
+    justify-content: space-around;
+    /* background-color: #F8EFD0; */
+    color: #F8EFD0 ;
+    border-bottom: solid 2px #F8EFD0;
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+}
+
+.favorites .p-tabview .p-tabview-panels {
+    background-color: #2A4C94;
+    border:none;
+    color: #F8EFD0;
+}
+
+.favorites .p-tabview .p-tabview-panels:hover {
+    background-color: #2A4C94;
+}
+
+.favorites .p-tabview-nav {
+    background-color: #F8EFD0;
+    color: #2A4C94;
+}
+
+.favorites .p-highlight {
+    border: none;
+}
+
+.favorites .p-component * {
+    box-sizing: unset;
+}
+
+:focus {outline:none !important;}
+
+a:focus, li:focus, ul:focus {
+    outline:none;  
+}
+
+/*This removes the ugly blue outline from the focus on the tabs*/
+.favorites .p-tabview.p-tabview-top .p-tabview-nav li a:not(.p-disabled):focus {
+    box-shadow: none;
+}
+
+/*This is the inactive tabs*/
+.favorites .p-tabview.p-tabview-top .p-tabview-nav li a {
+    background-color: #F8EFD0;
+    color: #2A4C94;
+    border: none;
+}
+
+/*This is the active tab*/
+.favorites .p-tabview.p-tabview-top .p-tabview-nav li.p-highlight a {
+    background-color: #2A4C94;
+    /* border:none; */
+    border:solid 2px #2A4C94;
+    color: #F8EFD0;
+}
+
+/*This is the inactive tabs on hover*/
+.favorites .p-tabview.p-tabview-top .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover a{
+    background-color: #F8EFD0;
+    color: #2A4C94;
+    border:solid 2px #2A4C94;
+}
+
+/*This is the active tab on hover*/
+.favorites .p-tabview.p-tabview-top .p-tabview-nav li.p-highlight:hover a {
+    background-color: #F8EFD0;
+    color: #2A4C94;
+    border:solid 2px #2A4C94;
+}

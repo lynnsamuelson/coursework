@@ -1,0 +1,60 @@
+[
+
+    {   
+        "websites":
+        [   
+            {
+                "id": 1,
+                "title": "San Diego Zoo",
+                "url": "https://kids.sandiegozoo.org/",
+                "desc": "The San Diego Zoo has a website just for kids with amazing videos, activities, and games. Enjoy the tour!"
+            },
+            {
+                "id": 2,
+                "title": "Yellowstone National Park",
+                "url": "https://www.nps.gov/yell/learn/photosmultimedia/virtualtours.htm?fbclid=IwAR0Rp_oZPGrLXssyopv4KFYPH9z4QTL7Utg5XJMYmx5Ggu3Gznnfjt7keeo",
+                "desc": "Tour Yellowstone National Park!"
+            }
+        ]
+    },
+    {
+        "podcasts" :
+        [
+            {
+                "id": 3,
+                "title": "Finn Caspian",
+                "url": "http://www.finncaspian.com/",
+                "desc": "Finn is travelingin spaceS"
+            },
+            {
+                "id": 4,
+                "title": "Brains On",
+                "url": "https://www.brainson.org/",
+                "desc": "From NPR"
+            },
+            {
+                "id": 5,
+                "title": "ExtraBlurt",
+                "url": "https://pinna.fm/library/kids-shows/pinna-podcasts/extra-blurt",
+                "desc": "desc"
+            },
+            {
+                "id": 6,
+                "title": "Grimm, Grimmer Grimmest",
+                "url": "https://pinna.fm/library/kids-shows/pinna-podcasts/grimm-grimmer-grimmest?gclid=Cj0KCQjw9tbzBRDVARIsAMBplx8RUXuHCa-uyUKhcPxExtLEMuhmeIodnz76vrMMZqOZTOY_sGqHsbIaAjUYEALw_wcB",
+                "desc": "Grims fairytails retold"
+            }
+        ]
+        },
+        {"activities": [
+           
+        ]},
+        {"Games": [
+            {
+                "id":7,
+                "title": "SET",
+                "url": "",
+                "desc": "A Mensa-award-winning  game of visual perception that challenges players to develop sets based on color, shape, number, and growth patterns. A \"set\" can be made with all positive or all negative patterning. Great for family game time or for individuals who want some brain training. This is a  perfect gift for your gifted child."
+            }
+        ]}
+    ]

@@ -4,16 +4,40 @@
         "websites":
         [   
             {
-                "id": 1,
-                "title": "San Diego Zoo",
-                "url": "https://kids.sandiegozoo.org/",
-                "desc": "The San Diego Zoo has a website just for kids with amazing videos, activities, and games. Enjoy the tour!"
+                "id": 11,
+                "title": "PBS Kids",
+                "url": "https://pbskids.org/",
+                "desc": "Play with fave show characters and learn too"
             },
             {
-                "id": 2,
-                "title": "Yellowstone National Park",
-                "url": "https://www.nps.gov/yell/learn/photosmultimedia/virtualtours.htm?fbclid=IwAR0Rp_oZPGrLXssyopv4KFYPH9z4QTL7Utg5XJMYmx5Ggu3Gznnfjt7keeo",
-                "desc": "Tour Yellowstone National Park!"
+                "id": 14,
+                "title": "Fun Brain",
+                "url": "https://www.funbrain.com/",
+                "desc": "Math and Reading games"
+            },
+            {
+                "id": 26,
+                "title": "Math and reading games",
+                "url": "https://www.abcya.com/",
+                "desc": "Math and reading games"
+            },
+            {
+                "id": 27,
+                "title": "Math and language games",
+                "url": "https://www.arcademics.com/",
+                "desc": "Math and language games"
+            },
+            {
+                "id": 29,
+                "title": "learn through Alexa",
+                "url": "https://l.facebook.com/l.php?u=https%3A%2F%2Fbamboolearning.com%2Fresources%3Ffbclid%3DIwAR2CeLWXV3BHCHzYwkYPZogWD7s_Hp8hSTz63ekFVBRCCymC6_1agbb4SAQ&h=AT3EXwqKYD-Ke3g2iKT5L1h1Hb5bb7iBsyXQLg8A8rdierOIEx-cD0kaEjqguy9Vq6_XFKo4PmRik6ncLr1Uaelh8RZ0MmEfVU3CjPGVUBTga_KGPxSOf5DKycWqMG8ixE2BeCbDbEqxOeO2V6DaQ5jVVnOYdt3NShLJUOsgcS8B",
+                "desc": "Voice based learning... learn through Alexa"
+            },
+            {
+                "id":31,
+                "title": "Click Schooling",
+                "url": "https://clickschooling.com/",
+                "desc": "ClickSchooling brings you daily recommendations by email for entertaining websites that help your kids learn."
             }
         ]
     },
@@ -46,15 +70,136 @@
             }
         ]
         },
-        {"activities": [
+        {"math": [
+            {
+                "id":32,
+                "title": "Bedtime Math",
+                "url": " http://bedtimemath.org/",
+                "desc": "Math as a fun part of your daily family routine"
+            },
+            {
+                "id": 20,
+                "title": "Math Score",
+                "url": "http://www.mathscore.com/",
+                "desc": "Math practice from counting to algebra and geometry"
+            }
            
         ]},
-        {"Games": [
+        {"ela": [
             {
-                "id":7,
-                "title": "SET",
-                "url": "",
-                "desc": "A Mensa-award-winning  game of visual perception that challenges players to develop sets based on color, shape, number, and growth patterns. A \"set\" can be made with all positive or all negative patterning. Great for family game time or for individuals who want some brain training. This is a  perfect gift for your gifted child."
+                "id": 15,
+                "title": "Phonics skills",
+                "url": "https://www.starfall.com/h/",
+                "desc": "Phonics skills"
+            },
+            {
+                "id":33,
+                "title": "Reading ECB",
+                "url": "https://reading.ecb.org/",
+                "desc": "Games to get \"into the book\""
+            },
+            {
+                "id": 21,
+                "title": "Storyline",
+                "url": "https://www.storylineonline.net/",
+                "desc": "Fave kids books read by famous people."
+            },
+            {
+                "id": 17,
+                "title": "Seussville",
+                "url": "https://www.seussville.com/",
+                "desc": "Read, play games, and hang out with Dr. Seuss"
+            }
+           
+        ]},
+        {"science": [
+            {
+                "id": 23,
+                "title": "American Chemical Society",
+                "url": "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.acs.org%2Fcontent%2Facs%2Fen%2Feducation%2Fresources%2Fhighschool%2Fchemmatters%2Farticles-by-topic.html%3Ffbclid%3DIwAR3vjyfhoEHcmnnX3uv2Nc7j0gmypygj0DFFiqj6v2CIeVmbvtgRBHjVE2Y&h=AT2rK0qy8KUttAF5idM-np0H6eYAnfHk56EQcb3ElhqZyYOJR7KRqODEYhIkNikUSJtPXIHT2qKghZHyM7EsjzF9mhKATfVyJ8PZx0fWu0PKQjAu7ohGql1QiMjtGz0o656C6r5gn6j0nZ0tSrX-Ppibvm6-Fv1t6ucG6HjwB3Jc",
+                "desc": "High school chemistry topics"
+            },
+            {
+                "id": 28,
+                "title": "Hands on Elem science videos",
+                "url": "https://www.backpacksciences.com/science-simplified",
+                "desc": "Hands on Elem science videos"
+            }
+        ]},
+        {"explore": [
+            {
+                "id": 1,
+                "title": "San Diego Zoo",
+                "url": "https://kids.sandiegozoo.org/",
+                "desc": "The San Diego Zoo has a website just for kids with amazing videos, activities, and games. Enjoy the tour!"
+            },
+            {
+                "id": 2,
+                "title": "Yellowstone National Park",
+                "url": "https://www.nps.gov/yell/learn/photosmultimedia/virtualtours.htm?fbclid=IwAR0Rp_oZPGrLXssyopv4KFYPH9z4QTL7Utg5XJMYmx5Ggu3Gznnfjt7keeo",
+                "desc": "Tour Yellowstone National Park!"
+            },
+            {
+                "id": 8,
+                "title": " Mars Curiosity Rover",
+                "url": "https://accessmars.withgoogle.com/",
+                "desc": "Explore the surface of Mars on the Curiosity Rover."
+            },
+            {
+                "id": 12,
+                "title": "The Louvre",
+                "url": "https://www.louvre.fr/en/visites-en-ligne",
+                "desc": "Travel to Paris, France to see amazing works of art at The Louvre with this virtual field trip."
+            },
+            {
+                "id":13,
+                "title": "Great Wall of China",
+                "url": "https://www.thechinaguide.com/destinati…/great-wall-of-china",
+                "desc": "This Virtual Tour of the Great Wall of China is beautiful and makes history come to life."
+            },
+            {
+                "id": 16,
+                "title": "British Museum",
+                "url": "https://britishmuseum.withgoogle.com/",
+                "desc": "This iconic museum located in the heart of London allows virtual visitors to tour the Great Court and discover the ancient Rosetta Stone and Egyptian mummies."
+            },
+            {
+                "id": 19,
+                "title": "National Geographic",
+                "url": "https://kids.nationalgeographic.com/",
+                "desc": "Geography and animals"
+            }
+        ]},
+        {"other": [
+            {
+                "id": 30,
+                "title": "Fun games, recipes, crafts, activities",
+                "url": "https://www.highlightskids.com/",
+                "desc": "Fun games, recipes, crafts, activities"
+            },
+            {
+                "id": 22,
+                "title": "All Kids Network",
+                "url": " https://www.allkidsnetwork.com/",
+                "desc": "Crafts, activities, mazes, dot to dot, etc."
+            },
+            {
+                "id": 18,
+                "title": "Worksheets",
+                "url": "https://www.123homeschool4me.com/home-school-free-printabl…/",
+                "desc": "300,000+ FREE printable worksheets from toddlers to teens "
+            },
+            {
+                "id": 9,
+                "title": "FarmFood 360",
+                "url": " https://www.farmfood360.ca/",
+                "desc": "This Canadian site FarmFood 360 offers 11 Virtual Tours of farms from minks, pigs, and cows, to apples and eggs."
+            },
+            {
+                "id": 10,
+                "title": "Switch Zoo",
+                "url": "https://switchzoo.com/",
+                "desc": "Play games and learn all about animals"
             }
         ]}
     ]

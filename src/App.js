@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="App">
       <h1 className="pageTitle">Mrs. Cunningham's Class</h1>
-      <div className="flex">
-        <div className="left">
+      <div className=" row flex">
+        <div className="column left">
         <Day className="left" />
         </div>
-        <div className="right">
+        <div className="column right">
           <Favorites />
         </div>
       </div>

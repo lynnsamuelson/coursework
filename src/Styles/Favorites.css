@@ -99,3 +99,15 @@ a:focus, li:focus, ul:focus {
     color: #2A4C94;
     border:solid 2px #2A4C94;
 }
+
+@media only screen and (max-width: 800px) {
+    .favorites .flex-container li p,     .favorites .flex-container li a {
+        float: left;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+}

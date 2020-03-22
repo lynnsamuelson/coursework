@@ -9,13 +9,30 @@ console.log("favorite books", FavoriteThings)
   return (
     <div className="favorites">
       <TabView>
+      <TabPanel header="mnps">
+          <ul className="flex-container">
+            <li>
+              <p>Title</p>
+              <p>Link</p>
+            </li>
+            {FavoriteThings[0].mnps.map(function(favorite, index) {
+              return (
+                <li key={favorite.id}>
+                  <p>{favorite.title}</p>
+                  <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        </TabPanel>
         <TabPanel header="Websites">
           <ul className="flex-container">
             <li>
               <p>Title</p>
               <p>Link</p>
             </li>
-            {FavoriteThings[0].websites.map(function(favorite, index) {
+            {FavoriteThings[1].websites.map(function(favorite, index) {
               return (
                 <li key={favorite.id}>
                   <p>{favorite.title}</p>
@@ -32,7 +49,7 @@ console.log("favorite books", FavoriteThings)
               <p>Title</p>
               <p>Link</p>
             </li>
-            {FavoriteThings[1].podcasts.map(function(favorite, index) {
+            {FavoriteThings[2].podcasts.map(function(favorite, index) {
               return (
                 <li key={favorite.id}>
                   <p>{favorite.title}</p>
@@ -49,7 +66,7 @@ console.log("favorite books", FavoriteThings)
               <p>Title</p>
               <p>Link</p>
             </li>
-            {FavoriteThings[2].math.map(function(favorite, index) {
+            {FavoriteThings[3].math.map(function(favorite, index) {
               return (
                 <li key={favorite.id}>
                   <p>{favorite.title}</p>
@@ -66,7 +83,7 @@ console.log("favorite books", FavoriteThings)
               <p>Title</p>
               <p>Link</p>
             </li>
-            {FavoriteThings[3].ela.map(function(favorite, index) {
+            {FavoriteThings[4].ela.map(function(favorite, index) {
               return (
                 <li key={favorite.id}>
                   <p>{favorite.title}</p>
@@ -83,7 +100,7 @@ console.log("favorite books", FavoriteThings)
               <p>Title</p>
               <p>Link</p>
             </li>
-            {FavoriteThings[4].science.map(function(favorite, index) {
+            {FavoriteThings[5].science.map(function(favorite, index) {
               return (
                 <li key={favorite.id}>
                   <p>{favorite.title}</p>
@@ -100,7 +117,7 @@ console.log("favorite books", FavoriteThings)
               <p>Title</p>
               <p>Link</p>
             </li>
-            {FavoriteThings[5].explore.map(function(favorite, index) {
+            {FavoriteThings[6].explore.map(function(favorite, index) {
               return (
                 <li key={favorite.id}>
                   <p>{favorite.title}</p>
@@ -117,7 +134,7 @@ console.log("favorite books", FavoriteThings)
               <p>Title</p>
               <p>Link</p>
             </li>
-            {FavoriteThings[6].other.map(function(favorite, index) {
+            {FavoriteThings[7].other.map(function(favorite, index) {
               return (
                 <li key={favorite.id}>
                   <p>{favorite.title}</p>

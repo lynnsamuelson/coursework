@@ -9,7 +9,7 @@ import 'primeicons/primeicons.css';
 function App() {
   return (
     <div className="App">
-      <h1 className="pageTitle">Mrs. Cunningham's Class</h1>
+      <h1 className="pageTitle">Cunningham's Class</h1>
       <div className=" row flex">
         <div className="column left">
         <Day className="left" />

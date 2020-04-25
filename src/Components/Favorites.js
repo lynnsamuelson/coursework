@@ -1,153 +1,91 @@
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 import {TabView,TabPanel} from 'primereact/tabview';
-import FavoriteThings from '../Favorites.json';
+import Favorite from '../data/Favorites.json';
 import '../Styles/Favorites.css';
+import {
+  useWindowSize,
+} from '@react-hook/window-size'
+import {Dialog} from 'primereact/dialog';
 
 function Favorites() {
-console.log("favorite books", FavoriteThings)
- 
+  const [width] = useWindowSize()
+  const [dialogText, setDialogText] = useState(""); 
+  const [searchTerm, setSearchTerm] = useState(""); 
+  const [searchResults, setSearchResults] = useState([]);
+  const [visible, setVisible] = useState(false);
+  const [detailsHeader, setDetailsHeader] = useState("");
+  const handleChange = event => {
+    console.log(event.target.value)  
+    setSearchTerm(event.target.value);
+  };
+  const showDialog = fav =>{
+    console.log("show dialog", fav);
+    setDialogText(fav.desc);
+    setDetailsHeader(fav.title);
+    setVisible(true);
+  }
+
+  React.useEffect(() => {
+    const results = Favorite.filter(fav =>
+      fav.desc.toLowerCase().includes(searchTerm)
+    );
+    setSearchResults(results);
+  }, [searchTerm]);
+
+  const mnps = [].concat(Favorite).filter(fav => {
+    return fav.tab === 'mnps';
+  })
+
   return (
     <div className="favorites">
-      <TabView>
+    <Dialog header={detailsHeader} visible={visible} style={{width: '50vw'}} modal={true} onHide={() => setVisible(false)}> 
+      {dialogText}
+    </Dialog>
+    <input type="text" value={searchTerm} placeholder="search"
+      onChange={handleChange}/>
+    <TabView activeIndex={1} >
       <TabPanel header="mnps">
-          <ul className="flex-container">
-            <li>
-              <p>Title</p>
-              <p>Link</p>
-            </li>
-            {FavoriteThings[0].mnps.map(function(favorite, index) {
-              return (
-                <li key={favorite.id}>
-                  <p>{favorite.title}</p>
+        <ul className="flex-container">
+          <li>
+            <div>Title</div>
+            {width > 810 && <div>Description</div>}
+            <div>Link</div>
+          </li>
+          {mnps.map(function(favorite, index) {
+            return (
+              <li key={favorite.id}>
+                <div>{favorite.title}</div>
+                {width > 810 && <div>{favorite.desc}</div>}
+                <div>
                   <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
                   </a>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </TabPanel>
+      <TabPanel active header="Search Results">
+      <ul className="flex-container">
+            <li>
+              <div>Title</div>
+                {width > 810 && <div>Description</div>}
+              <div>Link</div>
+            </li>
+            {searchResults.map(function(favorite, index) {
+              return (
+                <li key={favorite.id} onClick={(e) => showDialog(favorite)}>
+                  <div>{favorite.title}</div>
+                  {width > 810 && <div>{favorite.desc}</div>}
+                  <div>
+                    <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
+                  </a>
+                  </div>
                 </li>
               )
             })}
           </ul>
         </TabPanel>
-        <TabPanel header="Websites">
-          <ul className="flex-container">
-            <li>
-              <p>Title</p>
-              <p>Link</p>
-            </li>
-            {FavoriteThings[1].websites.map(function(favorite, index) {
-              return (
-                <li key={favorite.id}>
-                  <p>{favorite.title}</p>
-                  <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </TabPanel>
-        <TabPanel header="podcasts">
-          <ul className="flex-container">
-            <li>
-              <p>Title</p>
-              <p>Link</p>
-            </li>
-            {FavoriteThings[2].podcasts.map(function(favorite, index) {
-              return (
-                <li key={favorite.id}>
-                  <p>{favorite.title}</p>
-                  <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </TabPanel>
-        <TabPanel header="Math">
-          <ul className="flex-container">
-            <li>
-              <p>Title</p>
-              <p>Link</p>
-            </li>
-            {FavoriteThings[3].math.map(function(favorite, index) {
-              return (
-                <li key={favorite.id}>
-                  <p>{favorite.title}</p>
-                  <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </TabPanel>
-        <TabPanel header="ELA">
-          <ul className="flex-container">
-            <li>
-              <p>Title</p>
-              <p>Link</p>
-            </li>
-            {FavoriteThings[4].ela.map(function(favorite, index) {
-              return (
-                <li key={favorite.id}>
-                  <p>{favorite.title}</p>
-                  <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </TabPanel>
-        <TabPanel header="Science">
-          <ul className="flex-container">
-            <li>
-              <p>Title</p>
-              <p>Link</p>
-            </li>
-            {FavoriteThings[5].science.map(function(favorite, index) {
-              return (
-                <li key={favorite.id}>
-                  <p>{favorite.title}</p>
-                  <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </TabPanel>
-        <TabPanel header="Explore">
-          <ul className="flex-container">
-            <li>
-              <p>Title</p>
-              <p>Link</p>
-            </li>
-            {FavoriteThings[6].explore.map(function(favorite, index) {
-              return (
-                <li key={favorite.id}>
-                  <p>{favorite.title}</p>
-                  <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </TabPanel>
-        <TabPanel header="other">
-          <ul className="flex-container">
-            <li>
-              <p>Title</p>
-              <p>Link</p>
-            </li>
-            {FavoriteThings[7].other.map(function(favorite, index) {
-              return (
-                <li key={favorite.id}>
-                  <p>{favorite.title}</p>
-                  <a target="_blank" href={`${favorite.url}`} className="trim">{favorite.url} 
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </TabPanel>
-
-        
-        
       </TabView>
     </div>
   );

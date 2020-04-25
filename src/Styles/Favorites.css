@@ -2,6 +2,7 @@
     color: #F8EFD0;
 }
 .favorites {
+    position: relative;
     background-color: #F8EFD0;
     color: #2A4C94;
     height: 54vh;
@@ -9,6 +10,12 @@
     text-align: center;
     width: 90%;
     margin: 0 5%;
+}
+
+.favorites input {
+    position: absolute;
+    top: 15px;
+    left:230px;
 }
 
 .trim {
@@ -25,12 +32,23 @@
 
 .flex-container li{
     display: flex;
-    justify-content: space-between;
+    align-items: stretch;
+    padding-bottom:10px;
+}
+
+.flex-container li div:first-child {
+    width: 300px;
+}
+ 
+.flex-container li div {
+    width: 550px;
+    overflow: hidden;
+    text-align: left;
+    margin: 0 0 0 20px;
+    text-overflow: ellipsis;
 }
 
 .flex-container li:first-child {
-    justify-content: space-around;
-    /* background-color: #F8EFD0; */
     color: #F8EFD0 ;
     border-bottom: solid 2px #F8EFD0;
     padding: 0 0 10px 0;
@@ -81,7 +99,6 @@ a:focus, li:focus, ul:focus {
 /*This is the active tab*/
 .favorites .p-tabview.p-tabview-top .p-tabview-nav li.p-highlight a {
     background-color: #2A4C94;
-    /* border:none; */
     border:solid 2px #2A4C94;
     color: #F8EFD0;
 }
@@ -103,11 +120,17 @@ a:focus, li:focus, ul:focus {
 @media only screen and (max-width: 800px) {
     .favorites .flex-container li p,     .favorites .flex-container li a {
         float: left;
-    height: 50px;
-    line-height: 50px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+        height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width:100%;
     }
-
+    
+}
+@media only screen and (max-width: 580px) {
+    body .p-tabview {padding-top: 30px;}
+    .favorites input {
+        top: 0px;
+        left:40px
+    }
 }

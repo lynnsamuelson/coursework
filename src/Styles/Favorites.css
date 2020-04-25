@@ -26,6 +26,13 @@
     text-align: left;
 }
 
+.dialogLink {
+    text-overflow: ellipsis;  
+    overflow:hidden;             
+    white-space:nowrap;          
+    width: 100%;  
+}
+
 .flex-container li p {
     margin: 0 0 0 10px;
 }

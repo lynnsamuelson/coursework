@@ -10,18 +10,18 @@ import {Dialog} from 'primereact/dialog';
 function Favorites() {
   const [width] = useWindowSize()
   const [dialogText, setDialogText] = useState(""); 
+  const [dialogLink, setDialogLink] = useState(""); 
   const [searchTerm, setSearchTerm] = useState(""); 
   const [searchResults, setSearchResults] = useState([]);
   const [visible, setVisible] = useState(false);
   const [detailsHeader, setDetailsHeader] = useState("");
   const handleChange = event => {
-    console.log(event.target.value)  
     setSearchTerm(event.target.value);
   };
   const showDialog = fav =>{
-    console.log("show dialog", fav);
     setDialogText(fav.desc);
     setDetailsHeader(fav.title);
+    setDialogLink(fav.url);
     setVisible(true);
   }
 
@@ -40,6 +40,9 @@ function Favorites() {
     <div className="favorites">
     <Dialog header={detailsHeader} visible={visible} style={{width: '50vw'}} modal={true} onHide={() => setVisible(false)}> 
       {dialogText}
+      <div className="dialogLink">
+        <a target="_blank" href={`${dialogLink}`} className="trim">{dialogLink}</a>
+      </div>
     </Dialog>
     <input type="text" value={searchTerm} placeholder="search"
       onChange={handleChange}/>
